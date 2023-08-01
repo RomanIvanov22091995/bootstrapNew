@@ -1,6 +1,6 @@
-package ru.alexeykedr.springbootbootstrap.service;
+package com.example.bootsrtap.service;
 
-import ru.alexeykedr.springbootbootstrap.model.User;
+import com.example.bootsrtap.model.User;
 import java.util.List;
 
 public interface UserService {
@@ -12,7 +12,7 @@ public interface UserService {
 
     List<User> getAllUsers();
 
-    User getUserByLogin(String login);
+    User getUserByEmail(String email);
 
     User getUserById(long id);
 }

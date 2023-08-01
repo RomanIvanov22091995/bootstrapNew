@@ -13,7 +13,7 @@
 <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
         <p class="navbar-brand text-white">
-            <b><span class="align-middle" th:text="${user.login}"></span></b>
+            <b><span class="align-middle" th:text="${user.email}"></span></b>
             <span class="align-middle">with roles:</span>
             <span class="align-middle" th:text="${user.roles}"></span>
         </p>
@@ -53,20 +53,17 @@
                                   th:action="@{/new}"
                                   th:object="${user}"
                                   method="POST">
-                                <label for="name"><b>Name</b></label>
-                                <input th:name="name" th:type="text" class="form-control" id="name" required/>
+                                <label for="name"><b>First Name</b></label>
+                                <input th:name="firstName" th:type="text" class="form-control" id="name" required/>
                                 <br>
-                                <label for="surname"><b>Surname</b></label>
-                                <input th:name="surname" th:type="text" class="form-control" id="surname" required/>
+                                <label for="surname"><b>Last Name</b></label>
+                                <input th:name="lastName" th:type="text" class="form-control" id="surname" required/>
                                 <br>
                                 <label for="age"><b>Age</b></label>
                                 <input th:name="age" th:type="number" class="form-control" id="age"/>
                                 <br>
                                 <label for="email"><b>Email</b></label>
                                 <input th:name="email" th:type="text" class="form-control" id="email" required/>
-                                <br>
-                                <label for="login"><b>Login</b></label>
-                                <input th:name="login" th:type="text" class="form-control" id="login" required/>
                                 <br>
                                 <label for="password"><b>Password</b></label>
                                 <input th:name="password" th:field="*{password}" th:type="password" class="form-control"

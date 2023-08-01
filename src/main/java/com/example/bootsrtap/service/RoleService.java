@@ -1,6 +1,6 @@
-package ru.alexeykedr.springbootbootstrap.service;
+package com.example.bootsrtap.service;
 
-import ru.alexeykedr.springbootbootstrap.model.Role;
+import com.example.bootsrtap.model.Role;
 
 import java.util.List;
 

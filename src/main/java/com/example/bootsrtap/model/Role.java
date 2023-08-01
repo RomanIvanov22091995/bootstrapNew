@@ -1,4 +1,4 @@
-package ru.alexeykedr.springbootbootstrap.model;
+package com.example.bootsrtap.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import javax.persistence.Column;

@@ -14,7 +14,7 @@
 <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
         <p class="navbar-brand text-white">
-            <b><span class="align-middle" th:text="${user.login}"></span></b>
+            <b><span class="align-middle" th:text="${user.email}"></span></b>
             <span class="align-middle">with roles:</span>
             <span class="align-middle" th:text="${user.roles}"></span>
         </p>
@@ -55,23 +55,21 @@
                                 <table class="table table-striped table-hover">
                                     <tr>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Surname</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
                                         <th>Age</th>
                                         <th>Email</th>
-                                        <th>Login</th>
                                         <th>Role</th>
                                         <th>Edit</th>
                                         <th>Delete</th>
                                     </tr>
                                     <tr th:each="user : ${users}">
-                                        <td th:text="${user.id}">id</td>
-                                        <td th:text="${user.name}">name</td>
-                                        <td th:text="${user.surname}">surname</td>
-                                        <td th:text="${user.age}">age</td>
-                                        <td th:text="${user.email}">email</td>
-                                        <td th:text="${user.login}">login</td>
-                                        <td th:text="${user.roles}">roles</td>
+                                        <td th:text="${user.id}"></td>
+                                        <td th:text="${user.firstName}"></td>
+                                        <td th:text="${user.lastName}"></td>
+                                        <td th:text="${user.age}"></td>
+                                        <td th:text="${user.email}"></td>
+                                        <td th:text="${user.roles}"></td>
                                         <td>
                                             <a type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
                                                data-bs-target="#editModal"
@@ -96,15 +94,15 @@
                                                           th:object="${user}" th:method="PUT">
                                                         <div class="modal-body col-md text-center">
                                                             <br>
-                                                            <label for="name0"><b>Name</b></label>
-                                                            <input th:name="name" th:type="text"
+                                                            <label for="name0"><b>First Name</b></label>
+                                                            <input th:name="firstName" th:type="text"
                                                                    class="form-control" id="name0"
-                                                                   th:value="${user.name}"/>
+                                                                   th:value="${user.firstName}"/>
                                                             <br>
-                                                            <label for="surname0"><b>Surname</b></label>
-                                                            <input th:name="surname" th:type="text"
+                                                            <label for="surname0"><b>Last Name</b></label>
+                                                            <input th:name="lastName" th:type="text"
                                                                    class="form-control" id="surname0"
-                                                                   th:value="${user.surname}"/>
+                                                                   th:value="${user.lastName}"/>
                                                             <br>
                                                             <label for="age0"><b>Age</b></label>
                                                             <input th:name="age" th:type="number"
@@ -116,11 +114,7 @@
                                                                    class="form-control" id="email0"
                                                                    th:value="${user.email}"/>
                                                             <br>
-                                                            <label for="login0"><b>Login</b></label>
-                                                            <input th:name="login" th:type="text"
-                                                                   class="form-control" id="login0"
-                                                                   th:value="${user.login}"/>
-                                                            <br>
+
                                                             <label for="password0"><b>Password</b></label>
                                                             <input th:name="password" type="text"
                                                                    class="form-control" id="password0"
@@ -166,15 +160,15 @@
                                                             <input th:name="id" th:type="text" class="form-control"
                                                                    id="id" th:value="${user.id}" disabled/>
                                                             <br>
-                                                            <label for="name1"><b>Name</b></label>
+                                                            <label for="name1"><b>firstName</b></label>
                                                             <input th:name="name" th:type="text"
                                                                    class="form-control"
-                                                                   id="name1" th:value="${user.name}" disabled/>
+                                                                   id="name1" th:value="${user.firstName}" disabled/>
                                                             <br>
-                                                            <label for="surname1"><b>Surname</b></label>
+                                                            <label for="surname1"><b>lastName</b></label>
                                                             <input th:name="surname" th:type="text"
                                                                    class="form-control" id="surname1"
-                                                                   th:value="${user.surname}" disabled/>
+                                                                   th:value="${user.lastName}" disabled/>
                                                             <br>
                                                             <label for="age1"><b>Age</b></label>
                                                             <input th:name="age" th:type="number"
@@ -186,11 +180,7 @@
                                                                    class="form-control"
                                                                    id="email1" th:value="${user.email}" disabled/>
                                                             <br>
-                                                            <label for="login1"><b>Age</b></label>
-                                                            <input th:name="login" th:type="text"
-                                                                   class="form-control"
-                                                                   id="login1" th:value="${user.login}" disabled/>
-                                                            <br>
+
                                                         </div>
 
                                                         <div class="modal-footer">

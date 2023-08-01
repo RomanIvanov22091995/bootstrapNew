@@ -1,6 +1,6 @@
-package ru.alexeykedr.springbootbootstrap.controller;
+package com.example.bootsrtap.controller;
 
-import ru.alexeykedr.springbootbootstrap.model.User;
+import com.example.bootsrtap.model.User;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

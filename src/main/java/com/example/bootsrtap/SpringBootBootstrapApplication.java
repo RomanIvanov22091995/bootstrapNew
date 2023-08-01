@@ -1,4 +1,4 @@
-package ru.alexeykedr.springbootbootstrap;
+package com.example.bootsrtap;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
